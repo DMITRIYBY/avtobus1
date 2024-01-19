@@ -1,0 +1,20 @@
+/*TEXT*/
+h3{
+    /*margin: 0;*/
+}
+
+.blue__text{
+    color: var(--default-blue-color);
+}
+
+.text__regular__18px{
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+}
+
+.person__name{
+    color: grey;
+    font-size: 18px;
+    font-weight: 400;
+}

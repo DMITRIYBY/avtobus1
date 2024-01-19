@@ -1,0 +1,81 @@
+/*BUTTONS*/
+.button{
+    display: flex;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px 10px 20px;
+    align-items: center;
+    gap: 10px;
+    max-height: 40px;
+    font-size: 14px;
+
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.button__red{
+    background: var(--default-red-color);
+    color: white;
+}
+.button__red:hover{
+    background: var(--active-red-color);
+    color: white;
+}
+
+.button__blue{
+    background: var(--default-blue-color);
+    color: white;
+}
+.button__blue:hover{
+    background: var(--active-blue-color);
+    color: white;
+}
+
+
+.button__trash{
+    border: 2px solid var(--default-lightGrey-color);
+    background: none;
+    padding: 10px;
+}
+.button__trash .default__img{
+    display: block;
+}
+.button__trash .active__img{
+    display: none;
+}
+.button__trash:hover{
+    border: none;
+    background: var(--deep-orange-color);
+}
+.button__trash:hover .default__img{
+    display: none;
+}
+.button__trash:hover .active__img{
+    display: block;
+}
+
+.button__edit{
+    border: 2px solid var(--default-lightGrey-color);
+    background: none;
+    padding: 10px;
+}
+.button__edit .default__img{
+    display: block;
+}
+.button__edit .active__img{
+    display: none;
+}
+.button__edit:hover{
+    border: none;
+    background: var(--default-blue-color);
+}
+.button__edit:hover .default__img{
+    display: none;
+}
+.button__edit:hover .active__img{
+    display: block;
+}
+
+.arrow__button{
+    transform: rotate(180deg);
+}

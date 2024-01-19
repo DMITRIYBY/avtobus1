@@ -1,0 +1,64 @@
+:root{
+    /*COLORS*/
+    --default-red-color: rgba(248, 17, 85, 1);
+    --active-red-color: rgba(209, 0, 62, 1);
+
+    --default-blue-color: rgba(0, 91, 254, 1);
+    --active-blue-color: rgba(0, 71, 198, 1);
+
+    --default-grey-color: rgba(0, 0, 0, 1);
+    --default-lightGrey-color: rgba(0, 0, 0, 0.05);
+
+    --default-water-color: rgba(0, 91, 254, 0.1);
+
+    --deep-orange-color: rgba(234, 61, 47, 1);
+
+    font-family: Arial;
+}
+
+body{
+    background: rgba(246, 247, 249, 1);
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    background: white;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select{
+    background: var(--default-lightGrey-color);
+    border-radius: 6px;
+    height: 40px;
+    border: none;
+    padding-left: 10px;
+}
+
+.disable__page{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 70%;
+}

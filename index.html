@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Avtobus1</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <link rel="stylesheet" href="styles/containers.css">
+    <link rel="stylesheet" href="styles/text.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+<body>
+    <div class="disable__page"></div>
+    <header>
+        <div class="header__container">
+            <div class="row__container">
+                <img src="assets/Book.svg" alt="book_logo"/>
+                <h3 class="blue__text">Книга контактов</h3>
+            </div>
+            <div class="row__container">
+                <button class="button button__red contact__button">
+                    Добавить контакт
+                    <img src="assets/Add.svg" />
+                </button>
+                <button class="button button__blue group__button">Группы</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar__container group__sidebar">
+        <div class="sidebar__header">
+            <h3>Группы контактов</h3>
+            <button class="button" onclick="closeContainer(this)">
+                <img src="assets/Close.svg" alt="close">
+            </button>
+        </div>
+        <div class="sidebar__content">
+            <div class="groups__list">
+
+            </div>
+        </div>
+        <div class="sidebar__actions">
+            <button class="button" style="color: var(--default-blue-color)" onclick="showGroupInput()">Добавить</button>
+            <button class="button button__blue" onclick="addGroup()">Сохранить</button>
+        </div>
+    </div>
+
+    <div class="sidebar__container contact__sidebar">
+        <div class="sidebar__header">
+            <h3>Добавление контакта</h3>
+            <button class="button" onclick="closeContainer(this)">
+                <img src="assets/Close.svg" alt="close">
+            </button>
+        </div>
+        <div class="sidebar__content">
+            <form class="form contact__form">
+                <input type="text" id="fullName" placeholder="Введите ФИО">
+                <input type="text" id="phone__number" placeholder="Введите номер">
+                <select class="select__group" value="" placeholder="Выберите группу"></select>
+            </form>
+            <div class="sidebar__actions">
+                <button class="button button__blue" onclick="addContact()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar__container edit__contact__sidebar">
+        <div class="sidebar__header">
+            <h3>Изменение контакта</h3>
+            <button class="button" onclick="closeContainer(this)">
+                <img src="assets/Close.svg" alt="close">
+            </button>
+        </div>
+        <div class="sidebar__content">
+            <form class="form contact__form">
+                <input type="text" id="edit__fullName" placeholder="Введите ФИО">
+                <input type="text" id="edit__phone__number" placeholder="Введите номер">
+                <select class="select__group" placeholder="Выберите группу"></select>
+            </form>
+            <div class="sidebar__actions">
+                <button class="button button__blue button__confirm__edit" onclick="editContact()">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body__container">
+        <div class="list__container">
+
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
