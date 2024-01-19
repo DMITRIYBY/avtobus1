@@ -89,7 +89,7 @@ function fillEditContact(element){
     $pageFreeze.style.display = 'block';
 
     const $sidebar = document.querySelector('.edit__contact__sidebar');
-    $sidebar.style.left = '0';
+    $sidebar.classList.add('open__sidebar');
 
     const editedGroup = element.parentNode.parentNode.getAttribute('data-value');
     const editedGroupId = data.findIndex(item => item.group === editedGroup);
