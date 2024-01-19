@@ -34,7 +34,7 @@ function createGroup (item) {
     <div class="group__header">
         <h3>${item.group}</h3>
         <button class="show arrow__button" onclick="showGroupContacts(this)">
-            <img src="../assets/arrow.svg" alt="">
+            <img src="/assets/arrow.svg" alt="">
         </button>
     </div>
     <div class="box" style="width: 100%">
@@ -44,10 +44,10 @@ function createGroup (item) {
                 <div class="row__container">
                     <p class="text__regular__18px">${person.number}</p>
                     <button class="button button__edit" onclick="fillEditContact(this)" value="${person.fullName}">
-                         <img src="assets/defaultEdit.svg">
+                         <img src="/assets/defaultEdit.svg">
                     </button>
                     <button class="button button__trash" onclick="dropContact(this)" value="${person.fullName}">
-                         <img src="assets/defaultTrash.svg">
+                         <img src="/assets/defaultTrash.svg">
                     </button>
                 </div>
             </div>
@@ -205,7 +205,7 @@ function drawGroupsList(){
                     <p>${item.group}</p>
                 </div>
                 <button class="button button__trash" onclick="dropGroup(this)">
-                    <img src="assets/defaultTrash.svg">
+                    <img src="/assets/defaultTrash.svg">
                 </button>
             </div>    
         `
@@ -234,7 +234,7 @@ function showGroupInput(){
         <div class="row__container">
             <input type="text" id="fullName" placeholder="Введите название" style="width: 80%">
             <button class="button button__trash" onclick="updateInterface()">
-                 <img src="assets/defaultTrash.svg">
+                 <img src="/assets/defaultTrash.svg">
             </button>
         </div>    
     `
