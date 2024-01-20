@@ -79,3 +79,10 @@
 .arrow__button{
     transform: rotate(180deg);
 }
+
+.add__group__button{
+    color: var(--default-blue-color);
+}
+.disabled__button{
+    color: var(--default-lightGrey-color) !important;
+}

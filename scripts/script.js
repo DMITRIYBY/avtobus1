@@ -239,6 +239,8 @@ function showGroupInput(){
         </div>    
     `
 
+    document.querySelector('.add__group__button').classList.add('disabled__button');
+    document.querySelector('.add__group__button').setAttribute('tabindex', '-1')
     $groupsList.insertAdjacentHTML('beforeend', new_group);
 }
 
@@ -253,6 +255,10 @@ function addGroup(){
         };
 
         data.push(newGroup);
+
+        document.querySelector('.add__group__button').classList.remove('disabled__button');
+        document.querySelector('.add__group__button').removeAttribute('tabindex')
+
         updateInterface();
     } else {
         document.querySelector('.groups__list .row__container input').style.border = '2px solid red'
