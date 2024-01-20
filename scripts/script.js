@@ -233,7 +233,7 @@ function showGroupInput(){
     const new_group =`
         <div class="row__container">
             <input type="text" id="fullName" placeholder="Введите название" style="width: 80%">
-            <button class="button button__trash" onclick="updateInterface()">
+            <button class="button button__trash new__group__trash" onclick="updateInterface()">
                  <img src="./assets/defaultTrash.svg">
             </button>
         </div>    
@@ -242,6 +242,12 @@ function showGroupInput(){
     document.querySelector('.add__group__button').classList.add('disabled__button');
     document.querySelector('.add__group__button').setAttribute('tabindex', '-1')
     $groupsList.insertAdjacentHTML('beforeend', new_group);
+
+    document.querySelector('.new__group__trash').addEventListener('click', () => {
+        console.log('click')
+        document.querySelector('.add__group__button').classList.remove('disabled__button');
+        document.querySelector('.add__group__button').removeAttribute('tabindex')
+    })
 }
 
 function addGroup(){
