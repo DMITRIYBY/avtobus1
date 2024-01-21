@@ -161,18 +161,22 @@ function closeContainer(element){
 function addContact(){ //добавление контакта в группу
     const [fullName, number, group] = getFormValues();
 
-    const contact = {
-        fullName: fullName,
-        number: number,
-        group: group
-    }
+    if(validatePhoneNumber(number)){
 
-    const groupIndex = data.findIndex(item => item.group === group)
 
-    if(!isContactExists(fullName, number, groupIndex)){
-        data[groupIndex].contacts.push(contact);
-    }else{
-        alert(`Контакт ${fullName} уже имеется в группе ${group}`)
+        const contact = {
+            fullName: fullName,
+            number: number,
+            group: group
+        }
+
+        const groupIndex = data.findIndex(item => item.group === group)
+
+        if(!isContactExists(fullName, number, groupIndex)){
+            data[groupIndex].contacts.push(contact);
+        }else{
+            alert(`Контакт ${fullName} уже имеется в группе ${group}`)
+        }
     }
 
     updateLocalStorage();
@@ -327,6 +331,13 @@ function isContactExists(name, number, groupId){
         return false;
     }
 
+}
+
+
+function validatePhoneNumber(phoneNumber) {
+    const patternRegex = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+    const cleanedNumber = phoneNumber.replace(/\D/g, '');
+    return patternRegex.test(phoneNumber) && cleanedNumber.length === 11;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
